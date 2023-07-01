@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Body Mass Index Calculater </title>
+  <meta name="description" content="Do you want to check BMI value according to WHO? Fast  body mass index calculator to measure your body BMI for men and women. Time to test my quetelet Index! " />
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <html lang="en-us">
+  
+
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        <img src="bmi.png" alt="logo" width="28" height="28">
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="terms">
+          Terms
+        </a>
+  
+        <a class="navbar-item" href="/privacy">
+          Privacy
+        </a>
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-success" href="https://twitter.com/intent/tweet?text=I calculated my body mass index from this website. Check your health too." data-size="large" rel="nofollow">
+              Support
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered">MY BMI IS</h1>
+      <h2 class=" subtitle has-text-centered">Calculate My Bodymass Index</h2>
+      <div class="field">
+        
+        <div class="control">
+          <label class="label">Height (cm):</label>
+          <input class="input" type="number" id="height" min="1" required>
+        </div>
+      </div>
+      <div class="field">
+       <label class="label">Weight (kg):</label>
+        <div class="control">
+          
+          <input class="input" type="number" id="weight" min="1" required>
+        </div>
+      </div>
+      <div class="field">
+       
+        <div class="control">
+          <label class="label">Age:</label>
+          <input class="input" type="number" id="age" min="1" required>
+        </div>
+      </div>
+     
+      <div class="field is-grouped">
+        <div class="control">
+          <div class="select"><label for="gender"></label>
+            <select id="gender" name="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <button class="button is-success" onclick="calculateBMI()">Calculate</button>
+        </div>
+        <div class="control">
+          <button class="button" onclick="clearInput()">Clear</button>
+        </div>
+        
+
+      </div>
+      <div class="field">
+       
+        <div class="control">
+          <label class="label">BMI:</label>
+          <input class="input" type="text" id="bmi" readonly>
+        </div>
+      </div>
+      <div class="field">
+        
+        <div class="control">
+          <label class="label">Weight Category:</label>
+          <input class="input" type="text" id="weightCategory" readonly>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-inline-block
+        ">
+          
+        </div>
+      </div>
+    </div>
+   
+  </div>
+  </section>
+
+
+
+
+<script src="bmi.js" ></script>
+<script src="menu.js" ></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" ></script>
+  <script>
+    $(document).ready(function() {
+
+// Check for click events on the navbar burger icon
+$(".navbar-burger").click(function() {
+
+// Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+$(".navbar-burger").toggleClass("is-active");
+$(".navbar-menu").toggleClass("is-active");
+
+});
+});
+  </script>
+  
+<script>function clearInput() {
+  document.getElementById("height").value = "";
+  document.getElementById("weight").value = "";
+  document.getElementById("age").value = "";
+  document.getElementById("bmi").value = "";
+  document.getElementById("weightCategory").value = "";
+}</script>
+</body>
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      © github.com / zxunk 
+     
+    </p>
+  </div>
+</footer>
+</html>
